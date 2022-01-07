@@ -1,0 +1,31 @@
+
+<html>
+<head>
+</head>
+<body>
+<h2>Ajouter un Patient</h2>
+<form #f="ngForm" novalidate>
+
+  <label for="Num">Num:</label><br>
+  <input type="text" id="Num" name="Num" value="" ngModel><br><br>
+
+  <label for="Name">Name:</label><br>
+  <input type="text" id="Name" name="Name" value="" ngModel><br>
+
+  <label for="Age">Age:</label><br>
+  <input type="number" id="Age" name="Age" value="" ngModel><br>
+
+  <label for="Adress">Adress:</label><br>
+  <input type="text" id="Adress" name="Adress" value="" ngModel><br><br>
+
+  <input type="checkbox" id="Malade" name="Malade" checked ngModel>
+  <label for="Malade"> Malade ?</label><br>
+
+  <label for="Score">Score:</label><br>
+  <input type="number" id="Score" name="Score" value="" ngModel><br><br>
+
+  <input type="submit" value="Submit" (click)="ajouterPatient(f.value)" routerLink="/patient">
+</form>
+
+</body>
+</html>
